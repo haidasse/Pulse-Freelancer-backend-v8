@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "8b953c6a-1308-4add-b567-9ab0eec10d4a",
+		"name": "event-logs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/event-logs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"event-logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/event-logs/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"event-logs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "7b66329c-8cf2-49cf-b048-0e6e75528954",
+		"name": "users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"role_id\": 3,\r\n        \"short_code\": \"WHJBA211\",\r\n        \"code\": \"CNRTS411\",\r\n        \"first_name\": \"Addison\",\r\n        \"last_name\": \"Sporer\",\r\n        \"gender\": \"F\",\r\n        \"birth_date\": \"2007-10-31\",\r\n        \"email\": \"demo@invoicefit.com\",\r\n        \"google_id\": null,\r\n        \"phone\": \"+1.451.699.1867\",\r\n        \"address\": \"301 Janis Ports\\nSkileshaven, WI 43049-6040\",\r\n        \"job_title\": \"dolore\",\r\n        \"salary\": \"0.95\",\r\n        \"salary_term\": \"amet\",\r\n        \"joining_date\": \"1997-06-28\",\r\n        \"reporting_boss\": 32526,\r\n        \"facebook\": \"www.facebook.com\",\r\n        \"linked_in\": \"www.linkedin.com\",\r\n        \"skype\": \"aSkype\",\r\n        \"email_signature\": \"sed a\",\r\n        \"photo\": \"rerum\",\r\n        \"is_administrator\": 0,\r\n        \"inactive\": 0,\r\n        \"task_timer\": \"sed\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"role_id\": 3,\r\n        \"short_code\": \"WHJBA211\",\r\n        \"code\": \"CNRTS411\",\r\n        \"first_name\": \"Addison\",\r\n        \"last_name\": \"Sporer\",\r\n        \"gender\": \"F\",\r\n        \"birth_date\": \"2007-10-31\",\r\n        \"email\": \"demo@invoicefit.com\",\r\n        \"google_id\": null,\r\n        \"phone\": \"+1.451.699.1867\",\r\n        \"address\": \"301 Janis Ports\\nSkileshaven, WI 43049-6040\",\r\n        \"job_title\": \"dolore\",\r\n        \"salary\": \"0.95\",\r\n        \"salary_term\": \"amet\",\r\n        \"joining_date\": \"1997-06-28\",\r\n        \"reporting_boss\": 32526,\r\n        \"facebook\": \"www.facebook.com\",\r\n        \"linked_in\": \"www.linkedin.com\",\r\n        \"skype\": \"aSkype\",\r\n        \"email_signature\": \"sed a\",\r\n        \"photo\": \"rerum\",\r\n        \"is_administrator\": 0,\r\n        \"inactive\": 0,\r\n        \"task_timer\": \"sed\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get current user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Datatable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/datatable",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"datatable"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

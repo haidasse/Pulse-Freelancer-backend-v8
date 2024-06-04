@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'mode'                 => '',
+    'format'               => 'A4',
+    'default_font_size'    => '10',
+    'default_font'         => 'Helvetica',
+    'margin_left'          => 10,
+    'margin_right'         => 10,
+    'margin_top'           => 70,
+    'margin_bottom'        => 30,
+    'margin_header'        => 20,
+    'margin_footer'        => 20,
+    'orientation'          => 'P',
+    'title'                => 'Laravel mPDF',
+    'author'               => '',
+    'watermark'            => '',
+    'show_watermark'       => false,
+    'watermark_font'       => 'sans-serif',
+    'display_mode'         => 'fullpage',
+    'watermark_text_alpha' => 0.1,
+    'custom_font_dir'      => '',
+    'custom_font_data' 	   => [],
+    'auto_language_detection'  => false,
+    'temp_dir'             => rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR),
+    'pdfa' 				   => false,
+    'pdfaauto' 		   => false,
+];

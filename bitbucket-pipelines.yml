@@ -1,0 +1,29 @@
+# Template PHP Build
+
+# This template allows you to validate your PHP application.
+# The workflow allows running tests and code linting on the default branch.
+
+image: composer:2.0
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Pull
+            deployment: production
+            script:
+              - echo "Pull from master"
+              - sudo git pull origin master
+        - step:
+            name: Update && Clean
+            deployment: production
+            script:
+              - echo "Pull from master"
+              - sudo composer update
+              - php artisan config:clear
+              - php artisan route:clear
+        - step:
+            name: Serve
+            deployment: production
+            script:
+              - echo "Deploying to production environment"

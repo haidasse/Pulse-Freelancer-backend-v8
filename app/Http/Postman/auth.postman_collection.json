@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "669d7837-1dcc-423c-b480-05740a7b3aa8",
+		"name": "auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\" : \"Youssef\",\r\n    \"last_name\" : \"Lemrini\",\r\n    \"email\" : \"ylemrini@gmail.com\",\r\n    \"password\" : \"123456789\",\r\n    \"password_confirmation\" : \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"demo@invoicefit.com\",\r\n    \"password\" : \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResendEmail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/email/verify/resend",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"email",
+						"verify",
+						"resend"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "yassinouaarab5@gmaIL.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verifyEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/email/verify/26/4930874809ab470b542ee0d5ef9dd4e20ac10b37?expires=1616546762&signature=496368636c47b7f1ddb8b81f85e8eb90cd9154431ecfd8b0b2dd10f7e409e1d9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"email",
+						"verify",
+						"26",
+						"4930874809ab470b542ee0d5ef9dd4e20ac10b37"
+					],
+					"query": [
+						{
+							"key": "expires",
+							"value": "1616546762"
+						},
+						{
+							"key": "signature",
+							"value": "496368636c47b7f1ddb8b81f85e8eb90cd9154431ecfd8b0b2dd10f7e409e1d9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"ylemrini@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/password/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"password",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password/find",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/password/find/Wka0fXujYYdbcnbAs4Ds6IaQuSwjJEJrEA7ZLJ4T3vuc13G6ryIg1LJy4nGW",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"password",
+						"find",
+						"Wka0fXujYYdbcnbAs4Ds6IaQuSwjJEJrEA7ZLJ4T3vuc13G6ryIg1LJy4nGW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password/reset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"yassinouaarab5@gmail.com\",\r\n    \"password\" : \"secret2\",\r\n    \"password_confirmation\" : \"secret2\",\r\n    \"token\": \"xKn91akl9genjDqRqSyGsZrtTNFZf5cfKChI7WIEa1ztgrQhB7OrrgaBa6bj\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/password/reset",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"password",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oldpassword\" : \"123456789\",\r\n    \"password\" : \"12345678\",\r\n    \"password_confirmation\" : \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/password/update",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"password",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

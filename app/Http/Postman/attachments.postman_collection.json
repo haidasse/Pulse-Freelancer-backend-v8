@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "0c909a5a-f543-4d1b-bab3-3901104d3efc",
+		"name": "attachments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/attachments/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"attachments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/attachments/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"attachments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"object_type\": \"test\",\r\n    \"object_id\": \"5\",\r\n    \"name\": \"Dr. Albert Upton\",\r\n    \"size\": 4,\r\n    \"type\": \"Ryleigh Purdy\",\r\n    \"display_name\": \"Sophia Littel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/attachments/11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"attachments",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "testDescription",
+							"type": "file",
+							"src": "/E:/beweb/manageo/AE/guide.png"
+						},
+						{
+							"key": "object_type",
+							"value": "customer",
+							"type": "text"
+						},
+						{
+							"key": "object_id",
+							"value": "2",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/attachments",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"attachments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/attachments/download/c7l4QXlchRh21THa2sMxFAq2iVsMV9SmDNStDY9a.png",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"attachments",
+						"download",
+						"c7l4QXlchRh21THa2sMxFAq2iVsMV9SmDNStDY9a.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/attachments/c7l4QXlchRh21THa2sMxFAq2iVsMV9SmDNStDY9a.png",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"attachments",
+						"c7l4QXlchRh21THa2sMxFAq2iVsMV9SmDNStDY9a.png"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

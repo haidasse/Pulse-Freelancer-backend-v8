@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "263b8467-afac-489d-8fde-44fd8e22455b",
+		"name": "dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/dev/{table's name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dev/banks",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dev",
+						"banks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exception",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dev/exception",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dev",
+						"exception"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "datatable/{tables}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dev/datatable/expenses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dev",
+						"datatable",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
