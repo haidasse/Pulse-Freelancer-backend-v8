@@ -1,5 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\RoleController;
 
-Route::apiResource('roles', Api\RoleController::class)->middleware('auth:api');
+Route::apiResource('roles', RoleController::class)->middleware('auth:api');

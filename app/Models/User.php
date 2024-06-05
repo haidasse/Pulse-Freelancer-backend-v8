@@ -14,7 +14,7 @@ use App\Traits\Sortable;
 use App\Traits\Columns;
 use App\Traits\Filterable;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements  MustVerifyEmail
 {
     use HasFactory, Notifiable, HasApiTokens;
     use Sortable,

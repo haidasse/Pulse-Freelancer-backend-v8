@@ -32,11 +32,21 @@ class UserSeeder extends Seeder
         //user
 
         $role = Role::factory()->create([
-            "name" => "user",
+            "name" => "client",
         ]);
 
         User::factory()->create([
-            'email' => 'user@medinamall.com',
+            'email' => 'client@medinamall.com',
+            'password' => Hash::make("123456789"),
+            'role_id' => $role->id,
+        ]);
+        
+        $role = Role::factory()->create([
+            "name" => "freelancer",
+        ]);
+
+        User::factory()->create([
+            'email' => 'freelancer@medinamall.com',
             'password' => Hash::make("123456789"),
             'role_id' => $role->id,
         ]);
